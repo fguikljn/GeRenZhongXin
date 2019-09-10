@@ -1,0 +1,315 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-size: 0.14rem;
+    font-family: "MicroSoft Yahei";
+    background-color: #f8f8f8;
+}
+.topNav{
+    position: relative;
+    width: 7.5rem;
+    height: 0.88rem;
+    background-color: #fff;
+    padding: 0 0.2rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.topNav h2{
+    font-weight: normal;
+    font-size: 0.34rem;
+    text-align: center;
+}
+.topNav .backBtn img{
+    display: block;
+    width: 0.23rem;
+    height: 0.42rem;
+}
+.topNav .mine img{
+    display: block;
+    width: 0.35rem;
+    height: 0.4rem;
+}
+
+/* 内容 */
+.containerBox{
+    position: relative;
+    width: 7.5rem;
+    padding: 0.2rem;
+    margin: 0 auto;
+}
+.containerBox .inner{
+    position: relative;
+}
+.innerBlock{
+    padding: 0.2rem;
+    background-color: #fff;
+    border-radius: 0.15rem;
+    margin-bottom: 0.2rem;
+}
+
+/* 付款方式 */
+.bankTab{
+    padding: 0 0.2rem;
+}
+.bankTab .tabItem{
+    height: 1rem;
+    overflow: hidden;
+    border-bottom: 0.01rem solid #e5e5e5;
+}
+.bankTab .tabItem:last-child{
+    border-bottom-width: 0;
+}
+.bankTab .tabItem .itemTop{
+    height: 1rem;
+    background: url(../img/icon_down.png) no-repeat right center;
+    background-size: .24rem .13rem;
+    display: flex;
+    align-items: center;
+}
+.bankTab .tabItem .itemTop img{
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-right: 0.18rem;
+}
+.bankTab .tabItem .itemTop span{
+    max-width: 5.5rem;
+    color: #333333;
+    font-size: 0.28rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.bankTab .tabItem .itemCont{
+    padding: 0.2rem 0;
+    color: #666666;
+    font-size: 0.26rem;
+}
+.bankTab .tabItem .itemCont p{
+    display: block;
+    max-height: 100%;
+    line-height: 0.38rem;
+}
+.bankTab .tabItem.action{
+    height: 100%;
+}
+.bankTab .tabItem.action .itemTop{
+    background-image: url(../img/icon_top.png);
+}
+
+.payewm{
+    height: 2.88rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.payewm img{
+    width: 2.05rem;
+    height: 2.05rem;
+}
+
+/* 咨询 */
+.contact{
+    height: 2.97rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contact .leftewm{
+    font-size: 0.22rem;
+    color: #666666;
+}
+.contact .leftewm img{
+    display: block;
+    width: 1.75rem;
+    height: 1.75rem;
+}
+.contact .rightLink button{
+    display: block;
+    width: 2.4rem;
+    height: 0.7rem;
+    text-align: center;
+    font-size: 0.28rem;
+    color: #333333;
+    border: 0.01rem solid #cccccc;
+    background-color: #fff;
+    border-radius: 0.35rem;
+    outline: none;
+}
+.contact .rightLink button img{
+    margin-right: 0.1rem;
+}
+.contact .rightLink button img,
+.contact .rightLink button span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.contact .rightLink button:first-child{
+    margin-bottom: 0.25rem;
+}
+
+/* 留言 */
+.leaveMsg{
+    padding: 0.2rem 0.2rem 0.4rem;
+}
+.leaveMsg h4{
+    font-size: 0.32rem;
+    margin-bottom: 0.4rem;
+    color: #333333;
+    font-weight: normal;
+}
+.leaveMsg p{
+    line-height: 0.7rem;
+    font-size: 0.22rem;
+    text-align: right;
+    color: #999999;
+}
+.leaveMsg input{
+    width: 100%;
+    height: 0.8rem;
+    border: 0.01rem solid #e5e5e5;
+    border-radius: 0.1rem;
+    font-size: 0.28rem;
+    color: #333333;
+    margin-bottom: 0.2rem;
+}
+.leaveMsg input::placeholder,
+.leaveMsg textarea::placeholder{
+    color: #999999;
+}
+.leaveMsg input,
+.leaveMsg textarea{
+    padding: .25rem;
+}
+.leaveMsg textarea{
+    width: 100%;
+    height: 3.36rem;
+    border: 0.01rem solid #e5e5e5;
+    border-radius: 0.1rem;
+    font-size: 0.28rem;
+    color: #333333;
+}
+.leaveMsg button{
+    width: 100%;
+    height: 0.8rem;
+    border: 0.01rem solid #ff6400;
+    border-radius: 0.1rem;
+    background: #ff6400;
+    font-size: 0.28rem;
+    color: #fff;
+    margin-bottom: 0.2rem;
+}
+
+
+/* 关于媒介匣 */
+.aboutTab{
+    padding: 0.3rem 0.2rem 0.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.aboutTab .tabItem{
+    width: 2rem;
+    height: 0.66rem;
+    line-height: 0.66rem;
+    text-align: center;
+    font-size: 0.26rem;
+    color: #666666;
+    background-color: #f5f5f5;
+    border-radius: 0.05rem;
+    margin-bottom: 0.2rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 0 .1rem;
+}
+.aboutTab .tabItem.action{
+    background-color: #ff6400;
+    color: #fff;
+}
+.aboutMsg .msgBox{
+    display: none;
+}
+.aboutMsg .msgBox.current{
+    display: block;
+}
+.aboutMsg .msgItem{
+    display: block;
+    max-height: 100%;
+}
+.aboutMsg .msgItem .msgTitle{
+    padding-left: 0.2rem;
+    line-height: 0.6rem;
+    font-size: 0.28rem;
+    color: #fff;
+    background-color: #ff6400;
+    border-radius: 0.05rem;
+    margin-bottom: 0.3rem;
+}
+.aboutMsg .msgItem .msgCont{
+    font-size: 0.24rem;
+    color: #333333;
+}
+.aboutMsg .msgItem .msgCont p{
+    text-indent: 2em;
+    margin-bottom: 0.25rem;
+}
+
+
+/* 解决方案收藏 */
+.collection .collectItem{
+    border-radius: 0.15rem;
+    background-color: #fff;
+    padding: 0.2rem;
+    margin-bottom: 0.1rem;
+    display: flex;
+    align-items: center;
+}
+.collection .collectItem .leftImg{
+    min-width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.2rem;
+}
+.collection .collectItem .leftImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1rem;
+}
+.collection .collectItem .rightMsg{
+    width: 100%;
+}
+.collection .collectItem .rightMsg .title{
+    display: block;
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.collection .collectItem .rightMsg .tools{
+    overflow: hidden;
+}
+.collection .collectItem .rightMsg .tools a{
+    float: right;
+    height: 0.4rem;
+    border: 0.01rem solid #666666;
+    font-size: 0.26rem;
+    color: #666666;
+    margin-left: 0.1rem;
+    border-radius: 0.4rem;
+    padding: 0 0.2rem;
+    display: flex;
+    align-items: center;
+}
+.collection .collectItem .rightMsg .tools .check{
+    border-color: #ff6400;
+    color: #ff6400;
+}
+.collection .more{
+    line-height: 0.5rem;
+    font-size: 0.28rem;
+    color: #666666;
+    text-align: center;
+}

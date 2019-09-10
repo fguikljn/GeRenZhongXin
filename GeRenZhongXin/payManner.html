@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/GRZX.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/hotcss.js"></script>
+    <title>付款方式</title>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="topNav">
+        <a href="javascript:history.go(-1)" class="backBtn"><img src="img/icon_left.png" alt=""></a>
+        <h2>付款方式</h2>
+        <a href="javascript:;" class="mine"><img src="img/icon_mine.png" alt=""></a>
+    </div>
+    <!-- 内容 -->
+    <div class="containerBox">
+        <div class="inner">
+            
+            <div class="innerBlock bankTab">
+                <div class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/bank1.png" alt="">
+                        <span>对公基本户--民生银行</span>
+                    </div>
+                    <div class="itemCont">
+                        <p>账号名：河北红燊科技有限公司</p>
+                        <p>开户行：民生银行石家庄红旗大街支行</p>
+                        <p>银行账号：696136120</p>
+                    </div>
+                </div>
+                <div class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/bank2.png" alt="">
+                        <span>对公基本户--招商银行[禾众广告]</span>
+                    </div>
+                    <div class="itemCont">
+                        <p>账号名：河北红燊科技有限公司</p>
+                        <p>开户行：民生银行石家庄红旗大街支行</p>
+                        <p>银行账号：696136120</p>
+                    </div>
+                </div>
+                <div class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/bank2.png" alt="">
+                        <span>对公基本户--招商银行[禾众广告/境外付款]</span>
+                    </div>
+                    <div class="itemCont">
+                        <p>账号名：河北红燊科技有限公司</p>
+                        <p>开户行：民生银行石家庄红旗大街支行</p>
+                        <p>银行账号：696136120</p>
+                    </div>
+                </div>
+                <div class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/bank2.png" alt="">
+                        <span>对公基本户--招商银行[未来视窗]</span>
+                    </div>
+                    <div class="itemCont">
+                        <p>账号名：河北红燊科技有限公司</p>
+                        <p>开户行：民生银行石家庄红旗大街支行</p>
+                        <p>银行账号：696136120</p>
+                    </div>
+                </div>
+                <div class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/alipay.png" alt="">
+                        <span>对公基本户--支付宝</span>
+                    </div>
+                    <div class="itemCont">
+                        <p>账号名：河北红燊科技有限公司</p>
+                        <p>开户行：民生银行石家庄红旗大街支行</p>
+                        <p>银行账号：696136120</p>
+                    </div>
+                </div>
+                <div class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/bank3.png" alt="">
+                        <span>对私收款账户--工商银行</span>
+                    </div>
+                    <div class="itemCont">
+                        <p>账号名：河北红燊科技有限公司</p>
+                        <p>开户行：民生银行石家庄红旗大街支行</p>
+                        <p>银行账号：696136120</p>
+                    </div>
+                </div>
+                <div class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/alipay.png" alt="">
+                        <span>对私收款账户--支付宝</span>
+                    </div>
+                    <div class="itemCont">
+                        <p>账号名：河北红燊科技有限公司</p>
+                        <p>开户行：民生银行石家庄红旗大街支行</p>
+                        <p>银行账号：696136120</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="innerBlock payewm">
+                <img src="img/ewm.png" alt="">
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="js/GRZX.js"></script>
+    <script>
+        $(".bankTab").on("click",".itemTop",function(){
+            $(this).parent().siblings().removeClass("acion");
+            if($(this).parent().hasClass("action")){
+                $(this).parent().removeClass("action");
+            }else{
+                $(this).parent().addClass("action");
+            }
+        });
+    </script>
+</body>
+</html>
