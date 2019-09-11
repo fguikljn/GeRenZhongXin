@@ -307,9 +307,223 @@ body{
     border-color: #ff6400;
     color: #ff6400;
 }
-.collection .more{
+.more{
     line-height: 0.5rem;
     font-size: 0.28rem;
     color: #666666;
     text-align: center;
+}
+
+
+/* 推广返利 */
+.topTab{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.4rem;
+}
+.topTab .tabItem{
+    font-size: 0.28rem;
+    color: #333333;
+    border-bottom: 0.02rem solid #f8f8f8;
+    padding: 0.2rem 0 0.17rem;
+}
+.topTab .tabItem.action{
+    color: #ff6400;
+    border-bottom-color: #ff6400;
+}
+
+.amount{
+    font-size: 0.28rem;
+    color: #333333;
+}
+.amount span{
+    color: #ff6400;
+}
+.extractRecord .recordTab{
+    margin-bottom: 0.18rem;
+}
+.extractRecord .recordTab .tabItem{
+    float: left;
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 1;
+    padding: .17rem .26rem;
+    background-color: #f3f3f3;
+    border-top-left-radius: .1rem;
+    border-top-right-radius: .1rem;
+}
+.extractRecord .recordTab .tabItem.action{
+    background-color: #ff6400;
+    color: #fff;
+}
+.extractRecord .tabBlock{
+    font-size: 0.28rem;
+    color: #333333;
+}
+.extractRecord .tabBlock .blockItem{
+    display: none;
+}
+.extractRecord .tabBlock .blockItem.action{
+    display: block;
+}
+.extractRecord .tabBlock table{
+    width: 100%;
+}
+.extractRecord .tabBlock table,
+.extractRecord .tabBlock table th,
+.extractRecord .tabBlock table td{
+    border: 0.01rem solid #e5e5e5;
+    font-weight: normal;
+    text-align: center;
+}
+.extractRecord .tabBlock table thead{
+    background-color: #f8f8f8;
+}
+.extractRecord .tabBlock table th{
+    border-color: #d7d7d7;
+}
+.extractRecord .tabBlock table th,
+.extractRecord .tabBlock table td{
+    padding: .25rem 0;
+}
+.extractRecord .tabBlock table td{
+    color: #999999;
+}
+
+
+/* 解决方案收藏 */
+.friendOrder .orderItem{
+    border-radius: 0.15rem;
+    background-color: #fff;
+    padding: 0.2rem;
+    margin-bottom: 0.1rem;
+    display: flex;
+    align-items: center;
+}
+.friendOrder .orderItem .leftImg{
+    min-width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.2rem;
+}
+.friendOrder .orderItem .leftImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1rem;
+}
+.friendOrder .orderItem .rightMsg{
+    width: 100%;
+}
+.friendOrder .orderItem .rightMsg .title{
+    display: block;
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+.friendOrder .orderItem .rightMsg .orderPrice{
+    font-size: 0.28rem;
+    color: #333333;
+}
+.friendOrder .orderItem .rightMsg .orderPrice .money{
+    display: inline-block;
+    min-width: 1.06rem;
+    color: #ff6400;
+    margin-right: 1.25rem;
+}
+
+
+/* 资金提现 */
+.diversion{
+    padding: .4rem 0;
+    text-align: center;
+    line-height: 1;
+}
+.diversion p{
+    font-size: 0.28rem;
+    color: #333333;
+    margin-bottom: 0.4rem;
+}
+.diversion .money{
+    font-size: 0.28rem;
+    color: #ff6400;
+}
+.diversion .money span{
+    font-size: 0.6rem;
+}
+.diversion .tools{
+    margin-top: 0.6rem;
+    display: flex;
+    justify-content: space-around;
+}
+.diversion .tools .extractBtn,
+.diversion .tools .diversionBtn{
+    width: 3.25rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    font-size: 0.26rem;
+    color: #333333;
+    border: 0.01rem solid #cccccc;
+    border-radius: 0.7rem;
+    background-color: #fff;
+}
+.diversion .tools .extractBtn{
+    border-color: #ff6400;
+    background-color: #ff6400;
+    color: #fff;
+}
+.diversion2{
+    padding: 0;
+    font-size: 0.28rem;
+    color: #666666;
+}
+.diversion2 label{
+    padding: 0 0.2rem;
+    height: 0.85rem;
+    display: flex;
+    align-items: center;
+    border-bottom: 0.01rem solid #e5e5e5;
+}
+.diversion2 label:last-child{
+    border-bottom-width: 0;
+}
+.diversion2 span{
+    min-width: 1.7rem;
+    white-space: nowrap;
+}
+.diversion2 input{
+    width: 100%;
+    font-size: 0.26rem;
+    color: #999999;
+    border-width: 0;
+    outline: none;
+    padding: 0 0.2rem;
+    caret-color: #000000;
+}
+.diversion2 .allMoney{
+    min-width: 1.7rem;
+    height: 0.5rem;
+    background-color: #ff6400;
+    font-size: 0.26rem;
+    color: #fff;
+    border-width: 0;
+    border-radius: 0.5rem;
+}
+.diversion2 input::placeholder{
+    color: #999999;
+}
+.diversion2 ~ button{
+    width: 100%;
+    height: 0.8rem;
+    font-size: 0.28rem;
+    color: #fff;
+    background-color: #ff6400;
+    border-width: 0;
+    border-radius: .1rem;
+}
+.hint{
+    text-align: right;
+    color: #999999;
+    font-size: 0.22rem;
+    line-height: 1;
+    margin-bottom: 0.4rem;
 }
