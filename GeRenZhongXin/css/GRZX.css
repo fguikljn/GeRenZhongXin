@@ -1,9 +1,6 @@
 *{
     box-sizing: border-box;
 }
-::placeholder{
-    color: #999999;
-}
 body{
     font-size: 0.14rem;
     font-family: "MicroSoft Yahei";
@@ -47,6 +44,7 @@ body{
     position: relative;
 }
 .innerBlock{
+    display: block;
     padding: 0.2rem;
     background-color: #fff;
     border-radius: 0.15rem;
@@ -560,12 +558,19 @@ body{
     color: #333333;
 }
 .warmPrompt .promptTitle{
+    font-size: 0.28rem;
     color: #ff6400;
     line-height: 1;
     margin: 0.2rem 0;
 }
 .warmPrompt p{
     line-height: 0.4rem;
+}
+.warmPrompt i{
+    color: #ff6400;
+}
+.warmPrompt u{
+    color: #333333;
 }
 
 /* 在线充值 */
@@ -626,7 +631,7 @@ body{
 }
 .changePay label{
     position: relative;
-    height: 100px;
+    height: 1rem;
     border-bottom: 0.01rem solid #e5e5e5;
     padding: 0 0.2rem;
     font-size: 0.28rem;
@@ -691,4 +696,410 @@ body{
     font-size: 0.28rem;
     color: #fff;
     margin-bottom: 0.2rem;
+}
+
+
+/* 我的订单 */
+.headTopTab{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 0.15rem;
+}
+.headTopTab .tabItem{
+    font-size: 0.28rem;
+    color: #333333;
+    border-bottom: 0.04rem solid #f8f8f8;
+    padding: 0.2rem 0 0.1rem;
+}
+.headTopTab .tabItem.action{
+    color: #ff6400;
+    border-bottom-color: #ff6400;
+}
+
+.orderList .listItem{
+    border-radius: 0.15rem;
+    background-color: #fff;
+    margin-bottom: 0.1rem;
+}
+.orderList .listItem .itemMsg{
+    padding: 0.2rem;
+    border-bottom: 0.01rem solid #e5e5e5;
+    display: flex;
+    align-items: center;
+}
+.orderList .listItem .msgImg{
+    min-width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.2rem;
+}
+.orderList .listItem .msgImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1rem;
+}
+.orderList .listItem .rightMsg{
+    width: 100%;
+}
+.orderList .listItem .rightMsg .title{
+    display: block;
+    max-width: 5rem;
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.orderList .listItem .rightMsg .msgMoney{
+    font-size: 0.28rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.orderList .listItem .rightMsg .msgMoney .money{
+    color: #ff6400;
+}
+.orderList .listItem .rightMsg .msgMoney .num{
+    color: #333333;
+    font-size: 0.26rem;
+}
+.orderList .listItem .itemStatus{
+    font-size: 0.24rem;
+    color: #666666;
+    padding: 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.orderList .listItem .itemStatus .goTo{
+    min-width: 1.4rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    padding: 0 0.2rem;
+    color: #ff6400;
+    border: 0.01rem solid #ff6400;
+    border-radius: 2rem;
+}
+
+
+/* 待付款 */
+.obligation{
+    padding-top: 0.5rem;
+    font-size: 0.26rem;
+    line-height: 0.48rem;
+    color: #333333;
+}
+.obligation .money{
+    font-size: 0.3rem;
+    color: #000;
+    margin-bottom: 0.4rem;
+}
+.obligation .money b{
+    font-size: 0.3rem;
+    color: #ff6400;
+    font-weight: normal;
+}
+.obligation .money span{
+    font-size: 0.6rem;
+    color: #ff6400;
+}
+.obligation i{
+    font-style: normal;
+    color: #999999;
+}
+/* 优惠券 */
+.coupon{
+    font-size: 0.28rem;
+    color: #333333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.coupon .r{
+    font-size: 0.26rem;
+    color: #999999;
+    padding-right: 0.3rem;
+    background: url(../img/icon_right.png) no-repeat right center;
+    background-size: 0.13rem 0.2rem;
+}
+/* 支付方式 */
+.payMod{
+    padding: 0.2rem 0.4rem 0 0.4rem ;
+    font-size: 0.28rem;
+    color: #333333;
+    margin-bottom: 1.2rem;
+}
+.payMod .title{
+    margin-bottom: 0.2rem;
+}
+.payMod .payList label{
+    position: relative;
+    height: .9rem;
+    border-bottom: 0.01rem solid #e5e5e5;
+    padding: 0 0.2rem;
+    font-size: 0.28rem;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+.payMod .payList label:last-child{
+    border-bottom-width: 0;
+}
+.payMod .payList label input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.payMod .payList label .icon_radio{
+    width: 0.32rem;
+    height: 0.32rem;
+    background: url(../img/icon_radio.png) no-repeat center center;
+    background-size: 100%;
+    margin-right: 0.2rem;
+}
+.payMod .payList label input:checked ~ .icon_radio{
+    background-image: url(../img/icon_radio_b.png);
+}
+.payMod .payList label .payImg{
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-right: 0.15rem;
+}
+.button{
+    width: 100%;
+    height: 0.88rem;
+    border: 0.01rem solid #ff6400;
+    border-radius: 0.1rem;
+    background: #ff6400;
+    font-size: 0.28rem;
+    color: #fff;
+    margin-bottom: 0.2rem;
+}
+
+
+/* 待提交 */
+.setoutStatus{
+    padding: 0.4rem;
+}
+.setoutStatus img{
+    display: block;
+    height: 0.64rem;
+    margin: 0 auto 0.3rem;
+}
+.setoutStatus p{
+    display: block;
+    max-height: 100%;
+    line-height: 0.38rem;
+    font-size: 0.28rem;
+    color: #ff6400;
+    text-align: center;
+}
+/* 上传图片 */
+.orderImgUpload{
+    padding: 0.55rem .35rem;
+}
+.orderImgUpload .fileImg{
+    position: relative;
+    width: 100%;
+    height: 0.8rem;
+    color: #ff6400;
+    font-size: 0.26rem;
+    border: 0.01rem solid #ff6400;
+    border-radius: .1rem;
+    background-color: #fff;
+    margin-bottom: 0.15rem;
+}
+.orderImgUpload .fileImg img{
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.orderImgUpload .fileImg img,
+.orderImgUpload .fileImg span{
+    display: inline-block;
+    vertical-align: middle;
+}
+.orderImgUpload .fileImg input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+.orderImgUpload .fileName{
+    margin-bottom: 0.5rem;
+}
+.orderImgUpload p{
+    line-height: 0.38rem;
+    font-size: 0.22rem;
+    color: #999999;
+}
+.orderImgUpload p span{
+    color: #ff6400;
+}
+.orderImgUpload .title{
+    font-size: 0.28rem;
+    color: #333333;
+    margin-bottom: 0.2rem;
+}
+.orderImgUpload textarea{
+    font-size: 0.26rem;
+    width: 100%;
+    height: 2.2rem;
+    color: #333333;
+    padding: 0.14rem;
+    margin-bottom: 0.24rem;
+    border: 0.01rem solid #ccc;
+    border-radius: .1rem;
+}
+.orderUploadSub{
+    margin-top: 0.64rem;
+}
+
+.transactionFlow{
+    background-color: #f8f8f8;
+}
+.transactionFlow .title{
+    color: #333;
+    font-size: 0.3rem;
+    line-height: 1;
+    margin-bottom: 0.35rem;
+}
+.transactionFlow .flowList{
+    color: #333333;
+    font-size: 0.24rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transactionFlow .flowList .icon_flow{
+    display: block;
+    width: 0.6rem;
+    height: 0.6rem;
+    margin: 0 auto 0.15rem;
+    background: no-repeat center center;
+    background-size: 100%;
+}
+.transactionFlow .flowList .listItem.action{
+    color: #ff6400;
+}
+.transactionFlow .flowList .listItem:nth-child(1) .icon_flow{
+    background-image: url(../img/icon_flow1.png);
+}
+.transactionFlow .flowList .listItem:nth-child(1).action .icon_flow{
+    background-image: url(../img/icon_flow1_b.png);
+}
+.transactionFlow .flowList .listItem:nth-child(2) .icon_flow{
+    background-image: url(../img/icon_flow2.png);
+}
+.transactionFlow .flowList .listItem:nth-child(2).action .icon_flow{
+    background-image: url(../img/icon_flow2_b.png);
+}
+.transactionFlow .flowList .listItem:nth-child(3) .icon_flow{
+    background-image: url(../img/icon_flow3.png);
+}
+.transactionFlow .flowList .listItem:nth-child(3).action .icon_flow{
+    background-image: url(../img/icon_flow3_b.png);
+}
+.transactionFlow .flowList .listItem:nth-child(4) .icon_flow{
+    background-image: url(../img/icon_flow4.png);
+}
+.transactionFlow .flowList .listItem:nth-child(4).action .icon_flow{
+    background-image: url(../img/icon_flow4_b.png);
+}
+.transactionFlow .flowList .listItem:nth-child(5) .icon_flow{
+    background-image: url(../img/icon_flow5.png);
+}
+.transactionFlow .flowList .listItem:nth-child(5).action .icon_flow{
+    background-image: url(../img/icon_flow5_b.png);
+}
+
+
+/* 待执行订单详情 */
+.orderDetail{
+    padding: 0;
+    border-radius: 0.15rem;
+    background-color: #fff;
+    margin-bottom: 0.1rem;
+}
+.orderDetail .detailMsg{
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+}
+.orderDetail .msgImg{
+    min-width: 1.4rem;
+    height: 1.4rem;
+    margin-right: 0.2rem;
+}
+.orderDetail .msgImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.1rem;
+}
+.orderDetail .rightMsg{
+    width: 100%;
+}
+.orderDetail .rightMsg .title{
+    display: block;
+    max-width: 5rem;
+    font-size: 0.28rem;
+    color: #333333;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.orderDetail .rightMsg .msgMoney{
+    font-size: 0.28rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.orderDetail .rightMsg .msgMoney .money{
+    color: #ff6400;
+}
+.orderDetail .rightMsg .msgMoney .num{
+    color: #333333;
+    font-size: 0.26rem;
+}
+.orderDetail .detailStatus{
+    line-height: 0.5rem;
+    font-size: 0.26rem;
+    color: #333333;
+    padding: 0.4rem 0.4rem 0.3rem;
+    border-bottom: 0.01rem solid #ccc;
+}
+.orderDetail .detailStatus i{
+    color: #999999;
+}
+.orderDetail .detailStatus b{
+    color: #ff6400;
+}
+.orderDetail .tools{
+    height: 0.98rem;
+    padding: 0.2rem 0;
+    display: flex;
+}
+.orderDetail .tools a{
+    width: 50%;
+    font-size: 0.28rem;
+    padding-left: 0.45rem;
+    color: #333333;
+    background: url(../img/icon_qq.png) no-repeat .9rem center;
+    background-size: .34rem .4rem;
+    border-right: 0.01rem solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.orderDetail .tools a:last-child{
+    background-image: url(../img/icon_phone2.png);
+    background-size: .42rem .39rem;
 }

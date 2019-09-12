@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/GRZX.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/hotcss.js"></script>
+    <title>收银台</title>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="topNav">
+        <a href="javascript:history.go(-1)" class="backBtn"><img src="img/icon_left.png" alt=""></a>
+        <h2>收银台</h2>
+        <a href="javascript:;" class="mine"><img src="img/icon_mine.png" alt=""></a>
+    </div>
+    <!-- 内容 -->
+    <div class="containerBox">
+        <div class="inner">
+
+            <div class="innerBlock obligation">
+                <div class="money">订单金额:<b>￥</b><span>1.00</span></div>
+                <div class="orderNum">订单编号：<i>IN201909070957899982</i></div>
+                <div class="orderDate">订单日期：<i>2019-09-07</i></div>
+            </div>
+
+            <a class="innerBlock coupon">
+                <span>使用优惠券</span>
+                <span class="r">暂无优惠券</span>
+            </a>
+
+            <form action="">
+                <div class="innerBlock payMod">
+                    <div class="title">支付方式</div>
+                    <div class="payList">
+
+                        <label class="listItem">
+                            <input type="radio" name="pay" id="" checked>
+                            <i class="icon_radio"></i>
+                            <img src="img/yue.png" alt="" class="payImg">
+                            <span>余额</span>
+                        </label>
+
+                        <label class="listItem">
+                            <input type="radio" name="pay" id="">
+                            <i class="icon_radio"></i>
+                            <img src="img/alipay.png" alt="" class="payImg">
+                            <span>支付宝</span>
+                        </label>
+
+                        <label class="listItem">
+                            <input type="radio" name="pay" id="">
+                            <i class="icon_radio"></i>
+                            <img src="img/wx.png" alt="" class="payImg">
+                            <span>微信</span>
+                        </label>
+
+                    </div>
+                </div>
+
+                <button type="submit" class="button">确认支付</button>
+            </form>
+
+        </div>
+    </div>
+    
+    <script src="js/GRZX.js"></script>
+    <script>
+    </script>
+</body>
+</html>
