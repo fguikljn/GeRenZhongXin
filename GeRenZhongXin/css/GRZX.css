@@ -1,6 +1,9 @@
 *{
     box-sizing: border-box;
 }
+::placeholder{
+    color: #999999;
+}
 body{
     font-size: 0.14rem;
     font-family: "MicroSoft Yahei";
@@ -70,8 +73,8 @@ body{
     align-items: center;
 }
 .bankTab .tabItem .itemTop img{
-    width: 0.4rem;
-    height: 0.4rem;
+    width: 0.2rem;
+    height: 0.2rem;
     margin-right: 0.18rem;
 }
 .bankTab .tabItem .itemTop span{
@@ -152,11 +155,11 @@ body{
 
 /* 留言 */
 .leaveMsg{
-    padding: 0.2rem 0.2rem 0.4rem;
+    padding: 0.2rem 0.2rem 0.2rem;
 }
 .leaveMsg h4{
     font-size: 0.32rem;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
     color: #333333;
     font-weight: normal;
 }
@@ -298,7 +301,7 @@ body{
     font-size: 0.26rem;
     color: #666666;
     margin-left: 0.1rem;
-    border-radius: 0.4rem;
+    border-radius: 0.2rem;
     padding: 0 0.2rem;
     display: flex;
     align-items: center;
@@ -319,7 +322,7 @@ body{
 .topTab{
     display: flex;
     justify-content: space-around;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
 }
 .topTab .tabItem{
     font-size: 0.28rem;
@@ -365,6 +368,12 @@ body{
 }
 .extractRecord .tabBlock .blockItem.action{
     display: block;
+}
+.extractRecord .tabBlock .blockItem .itemTitle{
+    font-size: 0.28rem;
+    color: #ff6400;
+    line-height: 1;
+    margin: 0.2rem 0;
 }
 .extractRecord .tabBlock table{
     width: 100%;
@@ -434,14 +443,14 @@ body{
 
 /* 资金提现 */
 .diversion{
-    padding: .4rem 0;
+    padding: .4rem .2rem;
     text-align: center;
     line-height: 1;
 }
 .diversion p{
     font-size: 0.28rem;
     color: #333333;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
 }
 .diversion .money{
     font-size: 0.28rem;
@@ -471,6 +480,19 @@ body{
     background-color: #ff6400;
     color: #fff;
 }
+.diversion .linkTo{
+    display: block;
+    width: 100%;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    font-size: 0.28rem;
+    color: #fff;
+    background-color: #ff6400;
+    border-width: 0;
+    border-radius: .1rem;
+    margin-top: 0.6rem;
+}
+
 .diversion2{
     padding: 0;
     font-size: 0.28rem;
@@ -525,5 +547,148 @@ body{
     color: #999999;
     font-size: 0.22rem;
     line-height: 1;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
+}
+
+
+/* 财务中心 */
+.warmPrompt{
+    display: block;
+    max-height: 100%;
+    padding-bottom: 0.4rem;
+    font-size: 0.28rem;
+    color: #333333;
+}
+.warmPrompt .promptTitle{
+    color: #ff6400;
+    line-height: 1;
+    margin: 0.2rem 0;
+}
+.warmPrompt p{
+    line-height: 0.4rem;
+}
+
+/* 在线充值 */
+.changeMoney .moneyBlock .blockTitle{
+    font-size: 0.28rem;
+    color: #333333;
+    margin: 0.2rem 0 0.3rem;
+}
+.changeMoney .moneyBlock .moneyTab{
+    font-size: 0.28rem;
+    color: #666666;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.changeMoney .moneyBlock .moneyTab .tabItem{
+    position: relative;
+    text-align: center;
+    width: 2.1rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    margin-bottom: 0.2rem;
+}
+.changeMoney .moneyBlock .moneyTab .tabItem input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -moz-opacity: 0;
+    opacity: 0;
+}
+.changeMoney .moneyBlock .moneyTab .tabItem span{
+    display: block;
+    border: 0.01rem solid #cccccc;
+    border-radius: .05rem;
+    background-color: #fff;
+}
+.changeMoney .moneyBlock .moneyTab .tabItem input:checked ~ span{
+    border-color: #ff6400;
+    background-color: #ff6400;
+    color: #fff;
+}
+.changeMoney .moneyBlock .moneyInp{
+    width: 100%;
+    height: 0.7rem;
+    padding-left: 0.2rem;
+    font-size: 0.28rem;
+    color: #333333;
+    border: 0.01rem solid #cccccc;
+    outline: none;
+    caret-color: #000000;
+    margin-bottom: 0.2rem;
+}
+.changePay{
+    padding: 0;
+}
+.changePay label{
+    position: relative;
+    height: 100px;
+    border-bottom: 0.01rem solid #e5e5e5;
+    padding: 0 0.2rem;
+    font-size: 0.28rem;
+    color: #333333;
+    display: flex;
+    align-items: center;
+}
+.changePay label:last-child{
+    border-bottom-width: 0;
+}
+.changePay label input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.changePay label .icon_radio{
+    width: 0.32rem;
+    height: 0.32rem;
+    background: url(../img/icon_radio.png) no-repeat center center;
+    background-size: 100%;
+    margin-right: 0.2rem;
+}
+.changePay label input:checked ~ .icon_radio{
+    background-image: url(../img/icon_radio_b.png);
+}
+.changePay label .payImg{
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-right: 0.1rem;
+}
+
+.explain{
+    display: block;
+    max-height: 100%;
+    padding: 0.4rem 0.2rem;
+    font-size: 0.26rem;
+}
+.explain p{
+    color: #333333;
+    line-height: 0.5rem;
+}
+.explain .link{
+    display: inline-block;
+    line-height: 0.5rem;
+    font-size: 0.26rem;
+    color: #ff6400;
+    border: 0.01rem solid #ff6400;
+    border-radius: .5rem;
+    background-color: #fff;
+    padding: 0 0.3rem;
+    margin-top: 0.2rem;
+}
+.recharge{
+    width: 100%;
+    height: 0.88rem;
+    border: 0.01rem solid #ff6400;
+    border-radius: 0.1rem;
+    background: #ff6400;
+    font-size: 0.28rem;
+    color: #fff;
+    margin-bottom: 0.2rem;
 }
