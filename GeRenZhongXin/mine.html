@@ -8,25 +8,175 @@
     <link rel="stylesheet" href="css/GRZX.css">
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/hotcss.js"></script>
-    <title>个人中心</title>
+    <title>我的</title>
 </head>
 <body>
-<!-- 头部 -->
-<div class="topNav">
-    <a href="javascript:history.go(-1)" class="backBtn"><img src="img/icon_left.png" alt=""></a>
-    <h2>解决方案收藏</h2>
-    <a href="javascript:;" class="mine"><img src="img/icon_mine.png" alt=""></a>
-</div>
-<!-- 内容 -->
-<div class="containerBox">
-    <div class="inner">
-
-
+    <!-- 头部 -->
+    <div class="topNav">
+        <a href="javascript:history.go(-1)" class="backBtn"><img src="img/icon_left.png" alt=""></a>
+        <h2>我的</h2>
+        <a href="javascript:;" class="mine"><img src="img/icon_mine.png" alt=""></a>
     </div>
-</div>
+    <!-- 头像 -->
+    <img src="img/bg.png" alt="" class="headBg">
+    <div class="topHead">
+        <div class="left">
+            <img src="img/head.png" alt="" class="userHead">
+            <div class="designation">
+                <img src="img/diamond.png" alt="">
+                <span>钻石会员</span>
+            </div>
+        </div>
+        <div class="userName">13733286568g</div>
+        <a href="javascript:;" class="IDManagement">账号管理<img src="img/setting.png" alt=""></a>
+    </div>
+    <!-- 内容 -->
+    <div class="containerBox">
+        <div class="inner">
 
-<script>
+            <div class="innerBlock myPro">
+                <a href="javascript:;">
+                    <p class="top">11</p>
+                    <div class="bottom">关注产品</div>
+                </a>
+                <a href="javascript:;">
+                    <p class="top">101</p>
+                    <div class="bottom">浏览记录</div>
+                </a>
+            </div>
 
-</script>
+            <div class="innerBlock mineBlock">
+                <div class="blockTop">
+                    <div class="title">我的订单</div>
+                    <a href="javascript:;"  class="subhead icon_right">查看全部订单</a>
+                </div>
+                <div class="links">
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/waitPay.png" alt="">
+                            <span class="icon_num">1</span>
+                        </div>
+                        <div class="linkTxt">待付款</div>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/status.png" alt="">
+                        </div>
+                        <div class="linkTxt">待提交</div>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/execute_b.png" alt="">
+                        </div>
+                        <div class="linkTxt">执行中</div>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/complete.png" alt="">
+                        </div>
+                        <div class="linkTxt">已完成</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="innerBlock mineBlock caiwu">
+                <div class="blockTop">
+                    <div class="title">财务中心</div>
+                    <a href="javascript:;"  class="subhead">余额<i>￥</i><span class="money">2000.00</span></a>
+                </div>
+                <div class="links">
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/regist.png" alt="">
+                        </div>
+                        <div class="linkTxt">在线充值</div>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/invoice.png" alt="">
+                        </div>
+                        <div class="linkTxt">开具发票</div>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/detail.png" alt="">
+                        </div>
+                        <div class="linkTxt">财务明细</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="innerBlock mineBlock tuiguang">
+                <div class="blockTop">
+                    <div class="title">推广返利</div>
+                    <a href="javascript:;"  class="subhead"><img style="width: 2.26rem" src="img/yaoqing.png" alt=""></a>
+                </div>
+                <div class="links">
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/chong.png" alt="">
+                        </div>
+                        <div class="linkTxt">收益</div>
+                        <div class="bText"><i>￥</i>580.00</div>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/friend.png" alt="">
+                        </div>
+                        <div class="linkTxt">推广好友</div>
+                        <div class="bText">10</div>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/order.png" alt="">
+                        </div>
+                        <div class="linkTxt">好友订单</div>
+                        <div class="bText">32</div>
+                    </a>
+                    <a href="javascript:;" class="link">
+                        <div class="linkImg">
+                            <img src="img/jilu.png" alt="">
+                        </div>
+                        <div class="linkTxt">记录</div>
+                        <div class="bText">32</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="innerBlock bankTab iconR">
+                <a href="javascript:;" class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/jiejue.png" alt="">
+                        <span>解决方案收藏</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/help.png" alt="">
+                        <span>帮助中心</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/contact.png" alt="">
+                        <span>联系我们</span>
+                    </div>
+                </a>
+                <a href="javascript:;" class="tabItem">
+                    <div class="itemTop">
+                        <img src="img/pay.png" alt="">
+                        <span>付款方式</span>
+                    </div>
+                </a>
+            </div>
+
+            <button class="button exitLogin" type="button">退出登录</button>
+
+        </div>
+    </div>
+
+    <script src="js/GRZX.js"></script>
+    <script>
+    </script>
 </body>
 </html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/GRZX.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/hotcss.js"></script>
+    <title>我的订单</title>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="topNav">
+        <a href="javascript:history.go(-1)" class="backBtn"><img src="img/icon_left.png" alt=""></a>
+        <h2>我的订单</h2>
+        <a href="javascript:;" class="mine"><img src="img/icon_mine.png" alt=""></a>
+    </div>
+    <!-- 内容 -->
+    <div class="containerBox">
+        <div class="inner">
+            
+            <div class="headTopTab">
+                <a href="javascript:;" class="tabItem action">全部</a>
+                <a href="javascript:;" class="tabItem">待付款</a>
+                <a href="javascript:;" class="tabItem">待提交</a>
+                <a href="javascript:;" class="tabItem">执行中</a>
+                <a href="javascript:;" class="tabItem">完成</a>
+            </div>
+
+            <div class="orderList">
+
+                <div class="listItem">
+                    <a href="javascript:;" class="itemMsg">
+                        <img src="img/orderImg3.png" alt="" class="msgImg">
+                        <div class="rightMsg">
+                            <div class="title">【特殊行业】天涯问答/口碑推广/问答</div>
+                            <div class="msgMoney">
+                                <div class="money">￥100.00</div>
+                                <div class="num">数量*5</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="itemStatus">
+                        <a href="javascript:;" class="goTo">去提交</a>
+                        <span class="status">状态：未提交</span>
+                    </div>
+                </div>
+
+                <div class="listItem">
+                    <a href="javascript:;" class="itemMsg">
+                        <img src="img/orderImg2.png" alt="" class="msgImg">
+                        <div class="rightMsg">
+                            <div class="title">【新闻源收录】全网营销覆盖版</div>
+                            <div class="msgMoney">
+                                <div class="money">￥1.00</div>
+                                <div class="num">数量*1</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="itemStatus">
+                        <a href="javascript:;" class="goTo">立即支付</a>
+                        <span class="status">状态：未支付</span>
+                    </div>
+                </div>
+
+                <div class="listItem">
+                    <a href="javascript:;" class="itemMsg">
+                        <img src="img/orderImg4.png" alt="" class="msgImg">
+                        <div class="rightMsg">
+                            <div class="title">微信加粉/公众号/僵尸粉/真人粉</div>
+                            <div class="msgMoney">
+                                <div class="money">￥1.00</div>
+                                <div class="num">数量*1500</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="itemStatus">
+                        <a href="javascript:;" class="goTo">查看</a>
+                        <span class="status">状态：待执行</span>
+                    </div>
+                </div>
+
+                <div class="listItem">
+                    <a href="javascript:;" class="itemMsg">
+                        <img src="img/orderImg5.png" alt="" class="msgImg">
+                        <div class="rightMsg">
+                            <div class="title">【广告】百度/百度竞价/百度推广/百</div>
+                            <div class="msgMoney">
+                                <div class="money">￥1.00</div>
+                                <div class="num">数量*1500</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="itemStatus">
+                        <a href="javascript:;" class="goTo">查看</a>
+                        <span class="status">状态：执行中</span>
+                    </div>
+                </div>
+
+                <div class="listItem">
+                    <a href="javascript:;" class="itemMsg">
+                        <img src="img/orderImg1.png" alt="" class="msgImg">
+                        <div class="rightMsg">
+                            <div class="title">健康一线(新闻源）</div>
+                            <div class="msgMoney">
+                                <div class="money">￥235.00</div>
+                                <div class="num">数量*1</div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="itemStatus">
+                        <a href="javascript:;" class="goTo">查看</a>
+                        <span class="status">状态：已完成</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <p class="more">没有更多数据了</p>
+
+        </div>
+    </div>
+    
+    <script src="js/GRZX.js"></script>
+    <script>
+        
+        //懒加载
+        var flag = false;
+        $(document).on("scroll",function(){
+            if($(this).scrollTop() >= ($(".orderList").offset().top + $(".orderList").outerHeight() * 0.5) ){
+                if(flag) return;
+                flag = true;
+                $(".more").html("正在加载");
+                $.ajax({
+                    url: "url",
+                    type: "get",
+                    data: {},
+                    success: function (res) {
+                        
+                        if(res.data.length == 0){
+                            $(".more").html("没有更多数据了");
+                        }else{
+                            flag = false;
+                            $(".more").html("下拉显示更多");
+                        }
+
+                        $('<div class="listItem">'
+                                +'<a href="javascript:;" class="itemMsg">'
+                                    +'<img src="img/orderImg1.png" alt="" class="msgImg">'
+                                    +'<div class="rightMsg">'
+                                        +'<div class="title">健康一线(新闻源）</div>'
+                                        +'<div class="msgMoney">'
+                                            +'<div class="money">￥235.00</div>'
+                                            +'<div class="num">数量*1</div>'
+                                        +'</div>'
+                                    +'</div>'
+                                +'</a>'
+                                +'<div class="itemStatus">'
+                                    +'<a href="javascript:;" class="goTo">查看</a>'
+                                    +'<span class="status">状态：已完成</span>'
+                                +'</div>'
+                        +'</div>').appendTo(".orderList");
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

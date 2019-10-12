@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/GRZX.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/hotcss.js"></script>
+    <title>账号管理</title>
+</head>
+<body>
+    <!-- 头部 -->
+    <div class="topNav">
+        <a href="javascript:history.go(-1)" class="backBtn"><img src="img/icon_left.png" alt=""></a>
+        <h2>账号管理</h2>
+        <a href="javascript:;" class="mine"><img src="img/icon_mine.png" alt=""></a>
+    </div>
+    <!-- 内容 -->
+    <div class="containerBox">
+        <div class="inner">
+
+            <form action="" class="msgForm">
+                <div class="innerBlock">
+                    <div class="formTitle">基本信息</div>
+                    <div class="formBlock">
+                        <label>
+                            <span>姓名</span>
+                            <input type="text" pattern="\S+" required placeholder="请输入姓名" value="张鹏杰">
+                        </label>
+                        <label>
+                            <span>手机号</span>
+                            <input type="phone" class="phone" pattern="^1[3-9]\d{9}$" required placeholder="请输入手机号" value="13733286568">
+                        </label>
+                        <label for="">
+                            <span>密码</span>
+                            <img src="img/eye.png" alt="" class="eye">
+                            <input type="password" class="password" placeholder="请输入密码" value="123456" readonly>
+                        </label>
+                        <label>
+                            <span>QQ</span>
+                            <input type="text" pattern="\S+" required placeholder="请输入QQ" value="690735047">
+                        </label>
+                        <label>
+                            <span>微信</span>
+                            <input type="text" pattern="\S+" required placeholder="请输入微信" value="weixin123">
+                        </label>
+                    </div>
+                </div>
+                <div class="innerBlock">
+                    <div class="formTitle">企业信息</div>
+                    <div class="formBlock">
+                        <label>
+                            <span>企业名称</span>
+                            <input type="text" pattern="\S+" required placeholder="请输入企业名称" value="河北红燊科技有限公司">
+                        </label>
+                        <label>
+                            <span>官网地址</span>
+                            <input type="text" pattern="\S+" required placeholder="请输入官网地址" value="www.meijiexia.com">
+                        </label>
+                    </div>
+                </div>
+                <button class="button" type="submit">保存修改</button>
+            </form>
+
+        </div>
+    </div>
+
+    <div class="passwordPop">
+        <div class="mask"></div>
+        <div class="popCont">
+            <div class="close"></div>
+            <form class="repass">
+                <div class="passTitle">修改密码</div>
+                <label>
+                    <input type="text" class="originPass" pattern="\S+" required placeholder="原始密码">
+                </label>
+                <label>
+                    <input type="text" class="rePass" pattern="\S+" required placeholder="新密码">
+                </label>
+                <label>
+                    <input type="text" class="rePass2" pattern="\S+" required placeholder="确认密码">
+                    <p style="color: red; font-size: 0.2rem;"></p>
+                </label>
+                <button class="submit" type="submit">确定</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/GRZX.js"></script>
+    <script>
+        //显示密码
+        $(".msgForm").on("click",".eye",function(e){
+            console.log("eye")
+            e.stopPropagation();
+            if( $(this).hasClass("current") ){
+                $(this).removeClass("current");
+                $(this).siblings("input").attr("type","password");
+            }else{
+                $(this).addClass("current");
+                $(this).siblings("input").attr("type","text");
+            }
+        });
+
+        //修改密码弹窗
+        $(".msgForm").on("click",".password",function(e){
+            console.log("password")
+            e.stopPropagation();
+            $(".passwordPop").show();
+        });
+        $(".passwordPop").on("click",".mask,.close",function(){
+            $(".passwordPop").hide();
+        });
+        //验证原密码
+        $(".repass").on("submit",function(){
+            var originPass = $(".originPass").val();
+            var rePass = $(".rePass").val();
+            var rePass2 = $(".rePass2").val();
+            $.ajax({
+                url: "userMessage.html",
+                type: "post",
+                data: {
+                    originPass: originPass
+                },
+                success: function (res) {
+                    //验证成功后再执行下面的代码
+                    //验证成功后再执行下面的代码
+                    //验证成功后再执行下面的代码
+                    $(".password").val( rePass );
+                    $(".passwordPop").hide();
+                }
+            });
+            return false;
+        });
+        //验证输入一致
+        $(".rePass,.rePass2").on("input",function(){
+            var rePass = $(".rePass").val();
+            var rePass2 = $(".rePass2").val();
+            if( rePass2 != rePass ){
+                $(".rePass2").next().html('两次密码输入不一致！')
+            }else{
+                $(".rePass2").next().empty();
+            }
+        });
+    </script>
+</body>
+</html>
